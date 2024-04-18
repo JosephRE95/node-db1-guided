@@ -14,8 +14,9 @@ async function get() {
   return result
 }
 
-async function getById() {
-  return 'getById wired'
+async function getById(shipperId) {
+const result = await db('shippers').where('shipperid', shipperId).first()
+return result
 }
 
 async function create() {
