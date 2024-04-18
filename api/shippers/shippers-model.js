@@ -1,3 +1,6 @@
+const db = require('../../data/db-config')
+
+
 module.exports = {
   get,
   getById,
@@ -7,7 +10,8 @@ module.exports = {
 }
 
 async function get() {
-  return 'get wired'
+  const result = await db('shippers')
+  return result
 }
 
 async function getById() {
